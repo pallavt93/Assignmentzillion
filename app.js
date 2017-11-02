@@ -11,8 +11,8 @@ var morgan = require('morgan');
 var mongoose = require('mongoose');
 var KeyWords = require('./models/searchinfo');
 // Connection URL
-var url = 'mongodb://localhost:27017/assignment';
-//var url = 'mongodb://pallav:pallav123@ds243295.mlab.com:43295/assignmentzillion';
+//var url = 'mongodb://localhost:27017/assignment';
+var url = 'mongodb://pallav:pallav123@ds243295.mlab.com:43295/assignmentzillion';
 
 mongoose.connect(url);
 var db = mongoose.connection;
