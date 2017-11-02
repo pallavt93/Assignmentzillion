@@ -94,6 +94,10 @@ if(data != null)
                 {
                     ext = ".jpeg";
                 }
+            else if(extarr[j].indexOf('.gif') !== -1)
+                {
+                    ext = ".gif";
+                }
             
             
             
@@ -110,7 +114,7 @@ const op = {
       ext  = path.extname(op.dest);
      file = './public/images' + '/img' + i + ext;
     
-console.log("downloading...");
+
     
 download.image(op)
   .then(({ filename, image }) => {
@@ -122,7 +126,7 @@ download.image(op)
   });  
 }
 
-  console.log("extention = " + ext);    
+    
   
 }
 
@@ -179,8 +183,8 @@ function imageCompress(file)
 
 imageRouter.route('/')
 .post(function(req,res){
-    
-    Info.findOne({'keyword':req.body.keyword},function(err,key)
+    console.log(req.body);
+    Info.findOne(req.body,function(err,key)
                 {
                    if(err) console.log(err);
                    else if(key == null)
@@ -189,7 +193,7 @@ imageRouter.route('/')
                       {
                        if (err) console.log(err);
                        var id = keyword._id;
-                       console.log('Added the keyword with id: ' + id + 'and keyword ' + keyword);
+                       console.log('Added the keyword with id: ' + id + ' and keyword ' + keyword);
                        scrape(req,res,keyword);
                          
                           

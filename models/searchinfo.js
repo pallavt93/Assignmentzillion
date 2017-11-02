@@ -3,14 +3,14 @@ var Schema = mongoose.Schema;
 
 var imgInfo = new Schema(
     {
-      imagename:{type:String,unique:true},
+      imagename:{type:String},
       ext:{type:String}
     }
 );
 
 var infoSchema = new Schema(
 {
-    keyword:{type:String,unique:true},
+    keyword:{type:String},
     images:[imgInfo]
 },
 {
