@@ -1,0 +1,14 @@
+<!Doctype html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>keyword = <%= data.keyword%></h1>
+        <ul>
+            
+            <%for(var i = 0;i<15;i++){%>
+                <li><img src="/images/<%= data.keyword%>/<%= data.images[i].imagename%><%= data.images[i].ext%>" width="500px" height="600px"></li>
+            <%}%>
+        </ul>
+    </body>
+</html>

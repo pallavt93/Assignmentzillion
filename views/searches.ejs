@@ -1,0 +1,13 @@
+<!Doctype html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>searched keywords</h1>
+        <ul>
+            <%data.forEach(function(item){%>
+            <li><a href="/scrape/display?key=<%= item.keyword%>"><%= item.keyword%></a></li>
+            <%})%>
+        </ul>
+    </body>
+</html>
