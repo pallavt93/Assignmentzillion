@@ -20,7 +20,7 @@ var Info = require('../models/searchinfo');
 var imageRouter  = express.Router();
 
 //scrapper code
-var Scraper = require ('image-scraper');
+var Scraper = require ('images-scraper');
 var google = new Scraper.Google();
 
 
