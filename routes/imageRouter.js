@@ -45,7 +45,6 @@ function scrape(req,res,key)
 })
 .then(function (resp) {
    data =  resp;
-   res.json(data);
    scrapeImage(req,res,key); 
           
      
