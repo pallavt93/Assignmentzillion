@@ -56,7 +56,26 @@ function scrape(req,res,key)
 
 function scrapeImage(req,res,key)
 {
-        
+  
+
+    
+// Download to a directory and save with the original filename
+if (fs.existsSync("./public")) {
+    // Do something
+}   
+else
+{    
+fs.mkdirSync("./public"); 
+}    
+
+// Download to a directory and save with the original filename
+if (fs.existsSync("./public/images")) {
+    // Do something
+}   
+else
+{    
+fs.mkdirSync("./public/images"); 
+}                  
      
 // Download to a directory and save with the original filename
 if (fs.existsSync("./public/images/" + req.body.keyword)) {
@@ -111,7 +130,7 @@ const op = {
 };
  
       ext  = path.extname(op.dest);
-     file = './public/images' + '/img' + i + ext;
+     file = './public/images/'+ req.body.keyword + '/img' + i + ext;
     
 
     
